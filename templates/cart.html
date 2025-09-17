@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}
+Cart
+{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Your Cart</h1>
+{% if session.cart %}
+<ul>
+    {% for item in session.cart %}
+    <li>Product ID :{{item}}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No items yet.</p>
+{% endif %}
+<a href="{{ url_for('index') }}" class="btn btn-primary">Continue Shopping</a
+
+{% endblock %}
