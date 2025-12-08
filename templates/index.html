@@ -5,11 +5,14 @@
 
 {% block content %}
 <div class="container mt-5">
+    <h1 class="mb-2">The Dry Eye Shop</h1>
+<p class="text-muted">Simple tools to build your daily routine.</p>
+
  <div class="row">
     {% for product in products %}
-    <div class="col-md-4">
+     <div class="col-md-4 mb-4"> 
      <div class="card">
-        <img src="{{product['image_url']}}" class="card-img-top" alt="{{product['name']}}">
+        <img src="{{product['image_url']}}" class="product-img" alt="{{product['name']}}">
 
             <div class="card-body">
                 <h5 class="card-title">{{product['name']}}</h5>

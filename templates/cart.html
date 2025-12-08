@@ -1,19 +1,50 @@
 {% extends "base.html" %}
-{% block title %}
-Cart
-{% endblock %}
+{% block title %}Cart{% endblock %}
 
 {% block content %}
-<h1 class="mb-4">Your Cart</h1>
-{% if session.cart %}
-<ul>
-    {% for item in session.cart %}
-    <li>Product ID :{{item}}</li>
-    {% endfor %}
-</ul>
-{% else %}
-<p>No items yet.</p>
-{% endif %}
-<a href="{{ url_for('index') }}" class="btn btn-primary">Continue Shopping</a
+<div class="mt-5">  <!-- use this if base.html already has container -->
+  <h1 class="mb-4">Your Cart</h1>
 
+  {% if not products %}
+    <p>Your cart is empty</p>
+    <a href="{{ url_for('index') }}" class="btn btn-primary mt-3">Continue Shopping</a>
+  {% else %}
+    <table class="table align-middle">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Name</th>
+          <th class="text-end">Price</th>
+          <th class="text-end">Quantity</th>
+          <th class="text-end">Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for product in products %}
+        <tr>
+          <td style="width:72px">
+            <img src="{{ product.image_url }}" alt="{{ product.name }}" style="width:64px;height:64px;object-fit:cover">
+          </td>
+          <td>{{ product.name }}</td>
+          <td class="text-end">Rs. {{ product.price }}</td>
+          <td class="text-end">{{ product.quantity }}</td>
+          <td class="text-end">Rs. {{ product.subtotal }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="4" class="text-end">Total</th>
+          <th class="text-end">Rs. {{ total }}</th>
+        </tr>
+      </tfoot>
+    </table>
+
+    <form action="/checkout" method="post" class="text-end mt-3">
+      <button type="submit" class="btn btn-success">Checkout</button>
+    </form>
+
+    <a href="{{ url_for('index') }}" class="btn btn-primary mt-3">Continue Shopping</a>
+  {% endif %}
+</div>
 {% endblock %}
