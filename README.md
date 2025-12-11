@@ -26,11 +26,15 @@ Continue Shopping
 Checkout 
 View Order history
 View Order detail 
-#### File OverviewWhat each file stores and does:
-## App.py -> Stores my main application written in Python and incorporating Flask and stores all the routes
-## Helpers.py -> Stores my two helper functions, login required which is a decorator I use on features which require the user to be logged in such as logout, and db connection which i call in app.py to open a connection to the DB, this was new to me and took some time to wrap my head around since we didnt need to do this bit in CS50, but now the the concepts of opening and closing a connection, as well as commiting when making changes to the DB make sense to me. 
+#### File Overview
 
-## Requirements.txt-> Contains all the things required in order to set up my project, which can be installed with the command pip install. My requirements.txt initially included many packages because it was generated using pip freeze inside a virtual environment that contained preinstalled libraries from GitHub Codespaces. However, I later decided to reduce the clutter and only include the actual things required, which are just Flask, Flask-Session, and Werkzeug (For my password hashing, etc.) 
+#### App.py
+ Stores my main application written in Python and incorporating Flask and stores all the routes
+#### Helpers.py 
+Stores my two helper functions, login required which is a decorator I use on features which require the user to be logged in such as logout, and db connection which i call in app.py to open a connection to the DB, this was new to me and took some time to wrap my head around since we didnt need to do this bit in CS50, but now the the concepts of opening and closing a connection, as well as commiting when making changes to the DB make sense to me. 
+
+#### Requirements.txt
+Contains all the things required in order to set up my project, which can be installed with the command pip install. My requirements.txt initially included many packages because it was generated using pip freeze inside a virtual environment that contained preinstalled libraries from GitHub Codespaces. However, I later decided to reduce the clutter and only include the actual things required, which are just Flask, Flask-Session, and Werkzeug (For my password hashing, etc.) 
 ## Static/img: Contains the product images for my store
 ## Styles.css: Custom CSS which contains a product-img class used for standardizing my product images.
 
