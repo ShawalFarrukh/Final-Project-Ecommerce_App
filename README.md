@@ -15,16 +15,16 @@ I’ve also incorporated libraries, including Werkzeug for password hashing, ses
 
 ## Features
 
--Registering a new user
--Login authentication
--About section
--Support page 
--View Products
--Add to cart
--Continue Shopping
--Checkout 
--View Order history
--View Order detail 
+- Registering a new user
+- Login authentication
+- About section
+- Support page 
+- View Products
+- Add to cart
+- Continue Shopping
+- Checkout 
+- View Order history
+- View Order detail 
 
 ## File Overview
 
@@ -57,32 +57,32 @@ Contains all my HTML templates. One thing to note is that throughout my template
 
 ### Installation
 If running on a local machine; 
-'''
+```
 pip install -r  requirements.txt
 Flask run 
-'''
+```
 
 If running on CS50 codespace:
-'''
+```
 pip install -r requirements.txt
 export FLASK_APP=app.py
 flask run --host=0.0.0.0 --port=8080
-'''
+```
 
 ## Usage
 
--If a user is not registered and logged in, they can view the about page and the support page.
--A user can register by going to the register in the navbar or by clicking on register on the login page
--Register for a new account on the platform
--Log in with the credentials,
--Once logged in, the user can then view the dry eye products on the index page
--They can add one or more products to the cart 
--Proceed to checkout
--Once the order is complete, they will be taken to the order detail page for the current order
--View their complete order history by clicking on orders
--For each order, the user can click on the order detail to go into the details of each order
--Can click on the The Dry Eye Shop logo or click on the store in the navbar to go to the products page
--The user can click on logout on the navbar to Logout out of the app
+- If a user is not registered and logged in, they can view the about page and the support page.
+- A user can register by going to the register in the navbar or by clicking on register on the login page
+- Register for a new account on the platform
+- Log in with the credentials,
+- Once logged in, the user can then view the dry eye products on the index page
+- They can add one or more products to the cart 
+- Proceed to checkout
+- Once the order is complete, they will be taken to the order detail page for the current order
+- View their complete order history by clicking on orders
+- For each order, the user can click on the order detail to go into the details of each order
+- Can click on the The Dry Eye Shop logo or click on the store in the navbar to go to the products page
+- The user can click on logout on the navbar to Logout out of the app
 
 ## Challenges
 
@@ -90,7 +90,7 @@ Any difficulties you faced and how you overcame them.
 Needless to say, even though the finance problem set in CS50 was challenging, creating an end-to-end project from scratch was significantly more challenging, even with AI access now enabled. Some features were easier than others, such as Login and Register. I chose to implement the same way as was done in finance for simplicity’s sake. 
 However other features that i implemented for example the checkout function, where multiple steps were being perfomed from counting products in the cart using counter and querying and extracting the relevant products data from the database then creating a list of the products with the attributes then inserting into the orders and order items table, this took me a considerable amount to work with and understand using help from AI. 
 
-I also implemented my project outside of the CS50 codespace, so that I dont get timeouts from the codespace, etc., but then, at the end, using git clone codespace, I duplicated the project in CS50’s codespace in order to submit the project.
+I also implemented my project outside of the CS50 codespace, so that I don't get timeouts from the codespace, etc., but then, at the end, using git clone codespace, I duplicated the project in CS50’s codespace in order to submit the project.
 
 ## Acknowledgments
 
