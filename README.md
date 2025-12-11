@@ -35,15 +35,21 @@ Stores my two helper functions, login required which is a decorator I use on fea
 
 #### Requirements.txt
 Contains all the things required in order to set up my project, which can be installed with the command pip install. My requirements.txt initially included many packages because it was generated using pip freeze inside a virtual environment that contained preinstalled libraries from GitHub Codespaces. However, I later decided to reduce the clutter and only include the actual things required, which are just Flask, Flask-Session, and Werkzeug (For my password hashing, etc.) 
-## Static/img: Contains the product images for my store
-## Styles.css: Custom CSS which contains a product-img class used for standardizing my product images.
+#### Static/img
+Contains the product images for my store
+#### Styles.css
+Custom CSS which contains a product-img class used for standardizing my product images.
 
-## Db/app.db: Contains my SQLite database 
-## DB/Schema.sql: Contains commands to create my tables
-## Db/seed.sql: Contains Seed data to populate my tables and website 
+#### Db/app.db
+Contains my SQLite database 
+#### DB/Schema.sql
+Contains commands to create my tables
+#### Db/seed.sql
+Contains Seed data to populate my tables and website 
 
-## Templates: Contains all my HTML templates. One thing to note is that throughout my templates, i use url_for for things such as route URLs or images in case the URL is changed in the future.
-#### Installation: Instructions on how to set up and run your project.
+#### Templates
+Contains all my HTML templates. One thing to note is that throughout my templates, i use url_for for things such as route URLs or images in case the URL is changed in the future.
+#### Installation
 If running on a local machine; 
 Pip install -r  requirements.txt
 Flask run 
@@ -54,7 +60,6 @@ export FLASK_APP=app.py
 flask run --host=0.0.0.0 --port=8080
 
 #### Usage
-
 
 If a user is not registered and logged in, they can view the about page and the support page.
 A user can register by going to the register in the navbar or by clicking on register on the login page
@@ -68,6 +73,7 @@ View their complete order history by clicking on orders
 For each order can click on the order detail to go into the details of each order
 Can click on the The Dry Eye Shop logo or click on the store in the navbar to go to the products page
 The user can click on logout on the navbar to Logout out of the app
+
 #### Challenges
 
 Any difficulties you faced and how you overcame them.
@@ -75,6 +81,7 @@ Needless to say, even though the finance problem set in CS50 was challenging, cr
 However other features that i implemented for example the checkout function, where multiple steps were being perfomed from counting products in the cart using counter and querying and extracting the relevant products data from the database then creating a list of the products with the attributes then inserting into the orders and order items table, this took me a considerable amount to work with and understand using help from AI. 
 
 I also implemented my project outside of the CS50 codespace, but then, at the end, using git clone codespace, I duplicated the project in CS50’s codespace in order to submit the project.
+
 #### Acknowledgments
 
 I received guidance from ChatGPT for debugging and architectural explanations as well as coding concepts since the course mentioned that we can use ChatGPT and other AI tools only for the final project, in hindsight I’ll be honest that since i was new to coding with only CS50 experience and despite prompting Chatgpt to give beginner friendly help, I believe it made things way more complicated than they needed to be where i often had to learn so many new concepts it was throwing at me, which is a good thing from a learning perspective but it took me very long to complete the project.
