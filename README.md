@@ -61,7 +61,7 @@ Contains all my HTML templates. One thing to note is that throughout my template
 
 ### Database setup
 
-First, to set up Db run schema to create tables, and then run seed.sqp to full in products data.
+First, to set up Db, run schema to create tables, and then run seed.sql to populate intial products data.
 From the project root, run:
 
 ```
@@ -90,7 +90,7 @@ flask run
 - They can add one or more products to the cart
 - Proceed to checkout
 - Once the order is complete, they will be taken to the order detail page for the current order
-- They canv iew their complete order history by clicking on orders
+- They can view their complete order history by clicking on orders
 - For each order, the user can click on the order detail to go into the details of each order
 - The user can click on the The Dry Eye Shop logo or click on "Store" in the navbar to go to the products page
 - The user can click on logout in the navbar to Logout out of the app
