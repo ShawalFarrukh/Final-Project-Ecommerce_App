@@ -4,7 +4,7 @@
 
 ## Description
 The project that I have created for my CS50 final project is a mock E-commerce app + help and support website for patients suffering from dry eye disease. Dry Eye disease is a chronic eye disease affecting more and more people every day, with the growing use of digital screens in the world.
-The project aims to inform and help patients by providing resources and communities that the patients can follow, such as Facebook groups. Also by simulating an e-commerce store and displaying common dry eye products, it aims to educate the patients about the tools that they can use to help fight dry eye. 
+The project aims to inform and help patients by providing resources and communities that the patients can follow, such as Facebook groups. Also by simulating an e-commerce store and displaying common dry eye products, it aims to educate the patients about the tools that they can use to help fight dry eye.
 
 ## Inspiration
 
@@ -20,11 +20,11 @@ I’ve also incorporated libraries, including Werkzeug for password hashing, ses
 - Registering a new user
 - Login authentication
 - About section
-- Support page 
+- Support page
 - View Products in Store
 - Add Products to cart
 - Continue Shopping
-- Checkout 
+- Checkout
 - View Order history
 - View Order detail
 - Logout
@@ -33,14 +33,14 @@ I’ve also incorporated libraries, including Werkzeug for password hashing, ses
 
 ### App.py
  Using Flask, this file houses my main application routes written in Python
- 
-### Helpers.py 
+
+### Helpers.py
 Stores my two helper functions:
 - login required; which is a decorator I use on features that require the user to be logged in, such as logout
-- db connection; which I call in app.py to open a connection to the DB, this was new to me and took some time to wrap my head around since we didn't need to do this bit in CS50, but now the the concepts of managing a database connection make sense to me. 
+- db connection; which I call in app.py to open a connection to the DB, this was new to me and took some time to wrap my head around since we didn't need to do this bit in CS50, but now the the concepts of managing a database connection make sense to me.
 
 ### Requirements.txt
-Contains all the things required in order to set up my project, which can be installed with the command pip install. My requirements.txt initially included many packages because it was generated using pip freeze inside a virtual environment that contained preinstalled libraries from GitHub Codespaces. However, I later decided to reduce the clutter and only include the actual things required, which are just Flask, Flask-Session, and Werkzeug (For my password hashing, etc.) 
+Contains all the things required in order to set up my project, which can be installed with the command pip install. My requirements.txt initially included many packages because it was generated using pip freeze inside a virtual environment that contained preinstalled libraries from GitHub Codespaces. However, I later decided to reduce the clutter and only include the actual things required, which are just Flask, Flask-Session, and Werkzeug (For my password hashing, etc.)
 
 ### Static/img
 Contains the product images for my store
@@ -48,30 +48,30 @@ Contains the product images for my store
 ### Styles.css
 Custom CSS, which contains a "product-img" class used for standardizing my product image sizes.
 
-### Db/app.db
-Contains my SQLite database 
-
 ### DB/Schema.sql
 Contains commands to create the tables for the Database
 
 ### Db/seed.sql
-Contains Seed data to populate the Database tables  
+Contains Seed data to populate the Database tables
 
 ### Templates
 Contains all my HTML templates. One thing to note is that throughout my templates, I use "url_for" for things such as route URLs or images in case the URL is changed in the future.
 
-### Installation
-If running on a local machine; 
+## Installation
+
+### Database setup
+
+From the project root, run:
+
+sqlite3 app.db < db/schema.sql
+sqlite3 app.db < db/seed.sql
+
+### Running app
+
+
 ```
 pip install -r  requirements.txt
-Flask run 
-```
-
-If running on CS50 codespace:
-```
-pip install -r requirements.txt
-export FLASK_APP=app.py
-flask run --host=0.0.0.0 --port=8080
+Flask run
 ```
 
 ## Usage
@@ -81,7 +81,7 @@ flask run --host=0.0.0.0 --port=8080
 - Register for a new account on the platform
 - Log in with their credentials
 - Once logged in, the user can then view the dry eye products on the index page
-- They can add one or more products to the cart 
+- They can add one or more products to the cart
 - Proceed to checkout
 - Once the order is complete, they will be taken to the order detail page for the current order
 - They canv iew their complete order history by clicking on orders
@@ -91,8 +91,8 @@ flask run --host=0.0.0.0 --port=8080
 
 ## Challenges
 
-Needless to say, even though the problem sets in CS50 were challenging, creating an end-to-end project from scratch was significantly more challenging, even with AI access now enabled. Some features were easier than others, such as Login and Register. I chose to implement these in the same way as was done in finance for simplicity’s sake. 
-However other features that I implemented for example the checkout function, where multiple steps were being perfomed from counting products in the cart using counter and querying and extracting the relevant products data from the database then creating a list of the products with the attributes then inserting into the orders and order items table, this took me a considerable amount of time to work on and understand using help from AI. 
+Needless to say, even though the problem sets in CS50 were challenging, creating an end-to-end project from scratch was significantly more challenging, even with AI access now enabled. Some features were easier than others, such as Login and Register. I chose to implement these in the same way as was done in finance for simplicity’s sake.
+However other features that I implemented for example the checkout function, where multiple steps were being perfomed from counting products in the cart using counter and querying and extracting the relevant products data from the database then creating a list of the products with the attributes then inserting into the orders and order items table, this took me a considerable amount of time to work on and understand using help from AI.
 
 I also implemented my project outside of the CS50 codespace, so that I don't get timeouts from the codespace, etc., but then, at the end, using git clone codespace, I duplicated the project in CS50’s codespace in order to submit the project.
 
@@ -103,4 +103,4 @@ The code was implemented by me, and I made sure to completely understand any new
 
 ## Future Improvements
 
-In the future, this can be converted from a mock e-commerce store to an actual store with a payment gateway integrated, a delivery solution implemented as well, and this being placed in an actual live environment 
+In the future, this can be converted from a mock e-commerce store to an actual store with a payment gateway integrated, a delivery solution implemented as well, and this being placed in an actual live environment
