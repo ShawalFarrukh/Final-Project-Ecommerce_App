@@ -63,8 +63,12 @@ Contains all my HTML templates. One thing to note is that throughout my template
 
 From the project root, run:
 
+```
 sqlite3 app.db < db/schema.sql
 sqlite3 app.db < db/seed.sql
+
+```
+
 
 ### Running app
 
