@@ -77,7 +77,7 @@ Then, run flask
 
 ```
 pip install -r  requirements.txt
-Flask run
+flask run
 ```
 
 ## Usage
