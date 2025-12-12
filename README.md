@@ -1,8 +1,8 @@
 # The Dry Eye Shop
 #### Video Demo: https://youtu.be/t7lgG-C8rBQ
 ## Description
-The project that I have created for my CS50 final project is a mock E-commerce app + help and support website for patients suffering from dry eye disease. Dry Eye disease is a chronic eye disease affecting more and more people every day, with the growing use of digital screens in the world
-I have an about section which describes the project and its purpose, and then prompts the user to visit the support page for more information on resources and information that helped me personally, without needing to create an account or log in.
+The project that I have created for my CS50 final project is a mock E-commerce app + help and support website for patients suffering from dry eye disease. Dry Eye disease is a chronic eye disease affecting more and more people every day, with the growing use of digital screens in the world.
+(I have an about section which describes the project and its purpose, and then prompts the user to visit the support page for more information on resources and information that helped me personally, without needing to create an account or log in.)
 
 ## Inspiration
 
@@ -10,8 +10,8 @@ I contracted dry eye disease at the end of 2021 at age 24, and it has affected m
 
 ## Technologies Used
 
-For my project, when deciding on my technology stack, I decided to go with what I was familiar with, which was a lot of the technologies in CS50x. I used Flask as my microservice, where I wrote my routes in Python. I used SQLite for creating a database, creating tables and storing data in them, and also querying my tables in my code for things such as displaying products as well as inserting data, such as new order data for a user.
-I’ve also incorporated libraries, including Werkzeug for password hashing, session for storing user sessions, as well as storing products in the cart, rather than storing the cart in the database to keep it lightweight, and since it did not make sense to maintain the cart for the user beyond the session. I’ve also used Jinja templating to render my HTML templates. I used the Bootstrap library for most of my frontend designing, since everything was pretty much available there, and I did not have to write those parts myself. Components such as tables, responsive navbar, logic buttons, etc, have all been used from Bootstrap. I did not want to write custom CSS, so as not to reinvent the wheel, I only did so to standardize the product images for my products page, since I could not figure that out in Bootstrap.
+For my project, when deciding on my technology stack, I decided to go with what I was familiar with, which was a lot of the technologies I learned in CS50x. I used Flask as my web framework, where I wrote the routes for my app in Python. I used SQLite for creating a database, creating tables and storing data in them, and also querying my tables in my code for things such as displaying products as well as inserting data, such as new order data for a user.
+I’ve also incorporated libraries, including Werkzeug for password hashing, session for storing user sessions, as well as storing products in the cart, rather than storing the cart in the database to keep it lightweight, and since it did not make sense to maintain the cart for the user beyond the session. I’ve also used Jinja templating to render my HTML templates. I used the Bootstrap library for most of my frontend designing, since everything was pretty much available there, and I did not have to write those parts myself. Components such as tables, responsive navbar, logic buttons, etc, have all been used from Bootstrap. I did not want to write custom CSS, so as not to reinvent the wheel, I only wrote some custom CSS so as to standardize the product images for my products page, since I could not figure that out in Bootstrap.
 
 ## Features
 
@@ -19,20 +19,23 @@ I’ve also incorporated libraries, including Werkzeug for password hashing, ses
 - Login authentication
 - About section
 - Support page 
-- View Products
-- Add to cart
+- View Products in Store
+- Add Products to cart
 - Continue Shopping
 - Checkout 
 - View Order history
-- View Order detail 
+- View Order detail
+- Logout
 
 ## File Overview
 
 ### App.py
- Stores my main application written in Python and incorporating Flask, and stores all the routes
+ Using Flask, this file houses my main application routes written in Python
  
 ### Helpers.py 
-Stores my two helper functions, login required which is a decorator I use on features which require the user to be logged in such as logout, and db connection which I call in app.py to open a connection to the DB, this was new to me and took some time to wrap my head around since we didn't need to do this bit in CS50, but now the the concepts of opening and closing a connection, as well as committing when making changes to the DB make sense to me. 
+Stores my two helper functions:
+- login required; which is a decorator I use on features that require the user to be logged in, such as logout
+- db connection; which I call in app.py to open a connection to the DB, this was new to me and took some time to wrap my head around since we didn't need to do this bit in CS50, but now the the concepts of managing a database connection make sense to me. 
 
 ### Requirements.txt
 Contains all the things required in order to set up my project, which can be installed with the command pip install. My requirements.txt initially included many packages because it was generated using pip freeze inside a virtual environment that contained preinstalled libraries from GitHub Codespaces. However, I later decided to reduce the clutter and only include the actual things required, which are just Flask, Flask-Session, and Werkzeug (For my password hashing, etc.) 
@@ -41,19 +44,19 @@ Contains all the things required in order to set up my project, which can be ins
 Contains the product images for my store
 
 ### Styles.css
-Custom CSS, which contains a product-img class used for standardizing my product images.
+Custom CSS, which contains a "product-img" class used for standardizing my product image sizes.
 
 ### Db/app.db
 Contains my SQLite database 
 
 ### DB/Schema.sql
-Contains commands to create my tables
+Contains commands to create the tables for the Database
 
 ### Db/seed.sql
-Contains Seed data to populate my tables and website 
+Contains Seed data to populate the Database tables  
 
 ### Templates
-Contains all my HTML templates. One thing to note is that throughout my templates, I use url_for for things such as route URLs or images in case the URL is changed in the future.
+Contains all my HTML templates. One thing to note is that throughout my templates, I use "url_for" for things such as route URLs or images in case the URL is changed in the future.
 
 ### Installation
 If running on a local machine; 
@@ -74,21 +77,20 @@ flask run --host=0.0.0.0 --port=8080
 - If a user is not registered and logged in, they can view the about page and the support page.
 - A user can register by going to the register in the navbar or by clicking on register on the login page
 - Register for a new account on the platform
-- Log in with the credentials,
+- Log in with their credentials
 - Once logged in, the user can then view the dry eye products on the index page
 - They can add one or more products to the cart 
 - Proceed to checkout
 - Once the order is complete, they will be taken to the order detail page for the current order
-- View their complete order history by clicking on orders
+- They canv iew their complete order history by clicking on orders
 - For each order, the user can click on the order detail to go into the details of each order
-- Can click on the The Dry Eye Shop logo or click on the store in the navbar to go to the products page
-- The user can click on logout on the navbar to Logout out of the app
+- The user can click on the The Dry Eye Shop logo or click on "Store" in the navbar to go to the products page
+- The user can click on logout in the navbar to Logout out of the app
 
 ## Challenges
 
-Any difficulties you faced and how you overcame them.
-Needless to say, even though the finance problem set in CS50 was challenging, creating an end-to-end project from scratch was significantly more challenging, even with AI access now enabled. Some features were easier than others, such as Login and Register. I chose to implement the same way as was done in finance for simplicity’s sake. 
-However other features that i implemented for example the checkout function, where multiple steps were being perfomed from counting products in the cart using counter and querying and extracting the relevant products data from the database then creating a list of the products with the attributes then inserting into the orders and order items table, this took me a considerable amount to work with and understand using help from AI. 
+Needless to say, even though the problem sets in CS50 were challenging, creating an end-to-end project from scratch was significantly more challenging, even with AI access now enabled. Some features were easier than others, such as Login and Register. I chose to implement these in the same way as was done in finance for simplicity’s sake. 
+However other features that I implemented for example the checkout function, where multiple steps were being perfomed from counting products in the cart using counter and querying and extracting the relevant products data from the database then creating a list of the products with the attributes then inserting into the orders and order items table, this took me a considerable amount of time to work on and understand using help from AI. 
 
 I also implemented my project outside of the CS50 codespace, so that I don't get timeouts from the codespace, etc., but then, at the end, using git clone codespace, I duplicated the project in CS50’s codespace in order to submit the project.
 
