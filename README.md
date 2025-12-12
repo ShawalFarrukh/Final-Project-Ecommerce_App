@@ -1,8 +1,10 @@
 # The Dry Eye Shop
+
 #### Video Demo: https://youtu.be/t7lgG-C8rBQ
+
 ## Description
 The project that I have created for my CS50 final project is a mock E-commerce app + help and support website for patients suffering from dry eye disease. Dry Eye disease is a chronic eye disease affecting more and more people every day, with the growing use of digital screens in the world.
-(I have an about section which describes the project and its purpose, and then prompts the user to visit the support page for more information on resources and information that helped me personally, without needing to create an account or log in.)
+The project aims to inform and help patients by providing resources and communities that the patients can follow, such as Facebook groups. Also by simulating an e-commerce store and displaying common dry eye products, it aims to educate the patients about the tools that they can use to help fight dry eye. 
 
 ## Inspiration
 
