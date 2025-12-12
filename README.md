@@ -61,6 +61,7 @@ Contains all my HTML templates. One thing to note is that throughout my template
 
 ### Database setup
 
+First, to set up Db run schema to create tables, and then run seed.sqp to full in products data.
 From the project root, run:
 
 ```
@@ -72,6 +73,7 @@ sqlite3 db/app.db < db/seed.sql
 
 ### Running app
 
+Then, run flask
 
 ```
 pip install -r  requirements.txt
