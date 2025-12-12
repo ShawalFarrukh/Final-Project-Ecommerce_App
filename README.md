@@ -76,7 +76,7 @@ sqlite3 db/app.db < db/seed.sql
 Then, run flask
 
 ```
-pip install -r  requirements.txt
+pip install -r requirements.txt
 flask run
 ```
 
