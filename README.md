@@ -31,15 +31,15 @@ I’ve also incorporated libraries, including Werkzeug for password hashing, ses
 
 ## File Overview
 
-### App.py
+### app.py
  Using Flask, this file houses my main application routes written in Python
 
-### Helpers.py
+### helpers.py
 Stores my two helper functions:
 - login required; which is a decorator I use on features that require the user to be logged in, such as logout
 - db connection; which I call in app.py to open a connection to the DB, this was new to me and took some time to wrap my head around since we didn't need to do this bit in CS50, but now the the concepts of managing a database connection make sense to me.
 
-### Requirements.txt
+### requirements.txt
 Contains all the things required in order to set up my project, which can be installed with the command pip install. My requirements.txt initially included many packages because it was generated using pip freeze inside a virtual environment that contained preinstalled libraries from GitHub Codespaces. However, I later decided to reduce the clutter and only include the actual things required, which are just Flask, Flask-Session, and Werkzeug (For my password hashing, etc.)
 
 ### Static/img
@@ -48,10 +48,10 @@ Contains the product images for my store
 ### Styles.css
 Custom CSS, which contains a "product-img" class used for standardizing my product image sizes.
 
-### DB/Schema.sql
+### db/Schema.sql
 Contains commands to create the tables for the Database
 
-### Db/seed.sql
+### db/seed.sql
 Contains Seed data to populate the Database tables
 
 ### Templates
